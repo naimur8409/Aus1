@@ -1,0 +1,44 @@
+import { Grid } from '@material-ui/core';
+import React from 'react'
+import { DarkBtn } from '../../../../utils/button';
+import { PreviewContainer } from '../../../../utils/globalStyle';
+const Review = ({data1,data2,data3, fnc2,fnc1}) => {
+    return ( 
+             <PreviewContainer style={{width: '100%' , backgroundColor: 'rgba(51, 136, 255, 0.5)'}}>
+                        <h3>Preview Details</h3>
+                        <h4>Please check all the information before submit</h4>
+                        <Grid container spacing={1}>
+                        <p>Change of  Directors</p>
+                           
+                         <Grid item xs={12}>
+                             <h3 style={{textAlign: 'left'}}>Given Name </h3> <hr/>
+                             <p>Confidentiality Policy : <strong>{data2.gname }</strong></p>
+                             
+                         </Grid>
+                       
+                         
+                    
+                         <Grid item xs={12}>
+                             <h3 style={{textAlign: 'left'}}>ARBN</h3> <hr/>
+                             <p>jurisdiction : <strong>{data1.arbn } </strong></p>
+                             
+                         </Grid>
+                         <Grid item xs={12}>
+                             <h3 style={{textAlign: 'left'}}>Dname</h3> <hr/>
+                             <p>jurisdiction : <strong>{data3.Dname } </strong></p>
+                             
+                         </Grid>
+                         
+                         
+                         <Grid item xs={12}>
+                         <DarkBtn type="button" style={{float:'right', padding: '10px 16px'}} onClick={fnc1}>Next</DarkBtn> 
+                             <DarkBtn type="button" style={{float:'right', padding: '10px 16px'}} onClick={fnc2}>Back</DarkBtn>
+                             
+                            
+                         </Grid>
+                     </Grid>
+                     </PreviewContainer>
+     );
+}
+ 
+export default Review ;
